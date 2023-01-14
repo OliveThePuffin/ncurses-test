@@ -1,0 +1,8 @@
+#!/bin/sh
+
+BUILD_DIR="bin"
+SOURCE_DIR="src"
+
+cmake -DCMAKE_EXPORT_COMPILE_COMMANDS=ON -B$BUILD_DIR -S$SOURCE_DIR
+cmake --build $BUILD_DIR
+cp $BUILD_DIR/test .
